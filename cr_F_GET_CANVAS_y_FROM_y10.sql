@@ -1,0 +1,9 @@
+create or replace FUNCTION F_GET_CANVAS_y_FROM_y10
+(
+--  X IN NUMBER DEFAULT 20390000 ,
+ Y IN NUMBER DEFAULT 6510000 
+) RETURN VARCHAR2 AS 
+BEGIN
+    
+  RETURN replace(to_char(768-round((y-6510000)/5,0)+10),',','.');
+END F_GET_CANVAS_y_FROM_y10;
